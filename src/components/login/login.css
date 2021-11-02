@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imgFondo{ 
+    position: absolute;
+    bottom: 0%;
+}
+
+.ContainerModal{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
