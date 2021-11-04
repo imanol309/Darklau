@@ -1,225 +1,309 @@
-
 /* Contenedor de toda la paginas  */
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-/* Imagen del fondo de la pantalla */
-
-.imgFondo{ 
-    position: absolute;
-    bottom: 0%;
+body {
+    background-image: url('../../assets/img/new_wave.png');
+    background-repeat: no-repeat;
+    /* background-position-y: bottom; */
 }
 
 /* Contenedor del login completo la CARD que se ve en centro */
 
-.containerLogin{
-    position: relative;
-    width: 100%;
-    background: rgb(255, 255, 255);
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 2px 1px 10px #666
+.container{
+    height: 100vh;
+}
+
+.containerLogin {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: 2px 1px 10px #666;
+  margin-top: 5%;
 }
 
 /* imagen del modal  */
 
-.imgComunicacion{
-    height: 530px;
-    margin: 11%;
+.imgComunicacion {
+  height: 530px;
+  margin: 11%;
 }
 
 /* navbar del modal 2 palabras */
 
-.NavBarLogin{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    height: 80px;
+.NavBarLogin {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 80px;
 }
 
 .TextPrincipal {
-    transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.TextPrincipal:hover{
-    font-size: 35px;
+.TextPrincipal:hover {
+  font-size: 35px;
 }
 
-.TextPrincipal::first-letter{
-    color: rgb(100,52,216);
+.TextPrincipal::first-letter {
+  color: rgb(100, 52, 216);
 }
 
 .TextPrincipalContainer {
-    margin: 30px;
+  margin: 30px;
 }
 
-.textNewUser{
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    margin: 30px;
+.textNewUser {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+  margin: 10px;
 }
 
-.textUser{
-    padding-inline-end: 5px;
+.textUser {
+  padding-inline-end: 5px;
 }
 
-.TextUp{
-    color: rgb(100,52,216);
-    cursor: pointer;
+.TextUp {
+  color: rgb(100, 52, 216);
+  cursor: pointer;
 }
 
 /* Formulario principal contenedor de los input */
 
-.FormLogin{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 750px;
-    justify-content: space-between;
+.FormLogin {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 700px;
+  justify-content: space-between;
 }
 
-.FormImg{
-    width: 50%;
+.FormImg {
+  width: 50%;
 }
 
-.FormInput{
-    width: 60%;
-    margin: 6%;
+.FormInput {
+  width: 60%;
+  margin: 6%;
+  height: 150px;
 }
 
-.FormTitulo{
-    height: 100px;
+.FormTitulo {
+  height: 100px;
 }
 
-.textBack{
-    font-size: 45px;
-    letter-spacing: 3px;
+.textBack {
+  font-size: 45px;
+  letter-spacing: 3px;
 }
 
-.textCon{
-    margin: 5px;
-    color: rgb(95, 95, 95);
+.textCon {
+  margin: 5px;
+  color: rgb(95, 95, 95);
 }
 
-.containerForm{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
+.containerForm {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-    height: 70px;
-    margin-block-start: 6%;
-    width: 95%;
+  height: 70px;
+  margin-block-start: 6%;
+  width: 95%;
 }
 .inputPassword {
-    text-align: center;
-    padding: 0.25em 0.6em;
+  text-align: center;
+  padding: 0.25em 0.6em;
 }
 
 .inputPassword::placeholder {
-    background-image: url(../../assets/inputIcon/lock-solid.svg);
-    background-repeat: no-repeat;
-    background-size: 15px 15px;
-    background-position: 1rem center;
+  background-image: url(../../assets/inputIcon/lock-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 1rem center;
 }
 
-.inputGmail{
-    text-align: center;
-    padding: 0.25em 0.6em;
-    border-color: #6434d8;
+.inputGmail {
+  text-align: center;
+  padding: 0.25em 0.6em;
+  border-color: #6434d8;
 }
 
-.inputGmail::placeholder{
-    background-image: url(../../assets/inputIcon/3289576_user_icon.svg);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 1rem center;
+.inputGmail::placeholder {
+  background-image: url(../../assets/inputIcon/3289576_user_icon.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 1rem center;
 }
 
-.FormButton{
-    margin: 6px;
-    display: flex;
-    flex-direction: row;
-    padding-top: 7%;
+.FormButton {
+  margin: 6px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 7%;
 }
 
-/* butones de logiarse  */
+/* botones de logiarse  */
 
 button {
-    display: block;
-    border: none;
-    text-align: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    transition: all 0.5s;
-    cursor: pointer;
-    border-radius: 30px;
+  display: block;
+  border: none;
+  text-align: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 30px;
 }
 
 .btnLogin {
-    background-color: #6434d8; 
-    color: rgb(255, 255, 255); 
-    font-size: 16px;
-    margin-right: 5%;
+  background-color: #6434d8;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin-right: 5%;
 }
 
 .btnPassword {
-    color: black;
-    background-color: #ffffff; 
-    font-size: 14px;
+  color: black;
+  background-color: #ffffff;
+  font-size: 14px;
 }
 
-.btnLogin:hover{
-    background-color: #ffffff; 
-    color: black;
+.btnLogin:hover {
+  background-color: #ffffff;
+  color: black;
 }
 
-.btnPassword:hover{
-    background-color: #6434d8; 
-    color: rgb(255, 255, 255); 
+.btnPassword:hover {
+  background-color: #6434d8;
+  color: rgb(255, 255, 255);
 }
 
 /* Icono de la redes sociales para logiarse */
 
-.FormRedes{
-    display: flex;
-    flex-direction: row;
-    margin: 35px;
-    margin-top: 20%;
+.FormRedes {
+  display: flex;
+  flex-direction: row;
+  margin: 35px;
+  margin-top: 20%;
 }
 
-.tituloPrincipalRedes{
-    color: rgb(95, 95, 95);
-    font-size: 18px;
-    margin-right: 10%;
+.tituloPrincipalRedes {
+  color: rgb(95, 95, 95);
+  font-size: 18px;
+  margin-right: 10%;
 }
 
-.imgRedes{
-    height: 25px;
-    margin-inline-start: 25%;
-    cursor: pointer;
-    transition: all 0.5s;
+.imgRedes {
+  height: 25px;
+  margin-inline-start: 25%;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
 .imgRedes:hover {
-    height: 35px;
+  height: 35px;
 }
 
-.containerIconRedes{
+.containerIconRedes {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+/* Las modificacion cuando el width se esta volvio mas pequeño o forma de celular */
+
+@media screen and (max-width: 1200px) {
+  .imgComunicacion {
+    height: 430px;
+    margin: 11%;
+  }
+  .FormLogin {
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .FormImg {
+    width: 0;
+  }
+
+  .imgComunicacion {
+    height: 430px;
+    display: none;
+  }
+
+  .FormInput {
+    width: 100%;
+    margin: 6%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .FormButton {
+    width: 100%;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    align-items: center;
+  }
+
+  .btnLogin {
+    margin-bottom: 5%;
+    margin-right: 0%;
+  }
+
+  .textBack {
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+  
+  .FormRedes {
+    display: flex;
+    flex-direction: column;
+    margin: 35px;
+    align-items: center;
+    justify-content: center;
+  }
+  .tituloPrincipalRedes {
+    margin-right: 0;
+  }
+
+  .containerIconRedes {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .imgRedes {
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-inline-start: 0%;
+  }
+
+  .textUser {
+    padding-inline-end: 5px;
+    display: none;
+  }
+
+  .containerLogin {
+    margin-top: 0%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
+
 }

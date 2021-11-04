@@ -3,12 +3,14 @@ import Comunicacion from '../../assets/img/comunicacion.jpg'
 import facebook from '../../assets/iconsRedes/facebbok.png'
 import google from '../../assets/iconsRedes/google.png'
 import twiter from '../../assets/iconsRedes/twiter.png'
-import wave from '../../assets/img/new_wave.png'
+import {useAuth0} from '@auth0/auth0-react'
 
 function Login() {
+
+const {loginWithRedirect} = useAuth0()
+
   return (
     <div className="container">
-      <img src={wave} alt="" className="imgFondo" />
       <div className="containerLogin">
         <div className="NavBarLogin">
           <div className="TextPrincipalContainer">
@@ -33,7 +35,7 @@ function Login() {
               <input type="password" className="inputPassword" placeholder="Enter Password" />
             </div>
             <div className="FormButton">
-              <button className="btnLogin">LOGIN</button>
+              <button onClick={() => loginWithRedirect()} className="btnLogin">LOGIN</button>
               <button className="btnPassword">FORGET PASSWORD?</button>
             </div>
             <div className="FormRedes">
