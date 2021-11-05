@@ -7,7 +7,8 @@ import {useAuth0} from '@auth0/auth0-react'
 
 function Login() {
 
-const {loginWithRedirect} = useAuth0()
+const {loginWithRedirect, logout } = useAuth0()
+
 
   return (
     <div className="container">
@@ -36,7 +37,7 @@ const {loginWithRedirect} = useAuth0()
             </div>
             <div className="FormButton">
               <button onClick={() => loginWithRedirect()} className="btnLogin">LOGIN</button>
-              <button className="btnPassword">FORGET PASSWORD?</button>
+              <button onClick={() => logout()} className="btnPassword">FORGET PASSWORD?</button>
             </div>
             <div className="FormRedes">
               <p className="tituloPrincipalRedes">Login With</p>
