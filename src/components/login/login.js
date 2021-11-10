@@ -6,63 +6,73 @@ import twiter from "../../assets/iconsRedes/twiter.png";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Login() {
-  const { loginWithRedirect, user, isAuthenticated, logout } = useAuth0();
+  const { loginWithRedirect, user, isAuthenticated, logout, isLoading } =
+    useAuth0();
 
   return (
-    <div className="container">
-      <div className="containerLogin">
-        <div className="NavBarLogin">
-          <div className="TextPrincipalContainer">
-            <h3 className="TextPrincipal">Darklau</h3>
-          </div>
-          {
-            isAuthenticated ?
-            <div className="textNewUser">
-              <p className="TextUp" onClick={() => logout()}>LOGUOT</p>
+    <div className="container ">
+      {isLoading ? (
+        <div className="spinner"></div>
+      ) : (
+        <div className="containerLogin">
+          <div className="NavBarLogin">
+            <div className="TextPrincipalContainer">
+              <h3 className="TextPrincipal">Darklau</h3>
             </div>
-            :
-            null
-          }
-        </div>
-        <div className="FormLogin">
-          <div className="FormImg">
-            <img src={Comunicacion} alt="" className="imgComunicacion" />
+            {isAuthenticated ? (
+              <div className="textNewUser">
+                <p className="TextUp" onClick={() => logout()}>
+                  SALIR
+                </p>
+              </div>
+            ) : null}
           </div>
-          <div className="FormInput">
-            <div className="FormTitulo">
-              <h1 className="textBack">
-                Welcome {isAuthenticated ? `${user.name}` : "Back!"}
-              </h1>
-              <h5 className="textCon">Login to continue</h5>
+          <div className="FormLogin">
+            <div className="FormImg">
+              <img src={Comunicacion} alt="" className="imgComunicacion" />
             </div>
-            <div className="FormButton">
-              {isAuthenticated ? (
-                <div className="FormUsuario">
-                  <img src={user.picture} alt="" className="UsuarioImg" />
-                  <p className="UsuarioName">{user.name}</p>
-                  <p className="UsuarioEmail">{user.email}</p>
-                  <button className="btnUsuario">OPEN</button>
+            <div className="FormInput">
+              <div className="FormTitulo">
+                <h1 className="textBack">
+                  Bienvenido {isAuthenticated ? `${user.name}` : "de nuevo!"}
+                </h1>
+                <h5 className="textCon">
+                  {isAuthenticated
+                    ? `Ya puedes Continuar`
+                    : `Iniciar sesión para continuar`}
+                </h5>
+              </div>
+              <div className="FormButton">
+                {isAuthenticated ? (
+                  <div className="FormUsuario">
+                    <img src={user.picture} alt="" className="UsuarioImg" />
+                    <p className="UsuarioName">{user.name}</p>
+                    <p className="UsuarioEmail">{user.email}</p>
+                    <button className="btnUsuario">ENTRAR</button>
+                  </div>
+                ) : (
+                  <div className="FormButtonIniciar">
+                    <button
+                      onClick={() => loginWithRedirect()}
+                      className="btnLogin"
+                    >
+                      Iniciar Seccion
+                    </button>
+                  </div>
+                )}
+              </div>
+              <div className="FormRedes">
+                <p className="tituloPrincipalRedes">Redes Sociales</p>
+                <div className="containerIconRedes">
+                  <img src={google} alt="" className="imgRedes" />
+                  <img src={facebook} alt="" className="imgRedes" />
+                  <img src={twiter} alt="" className="imgRedes" />
                 </div>
-              ) : (
-                <button
-                  onClick={() => loginWithRedirect()}
-                  className="btnLogin"
-                >
-                  LOGIN
-                </button>
-              )}
-            </div>
-            <div className="FormRedes">
-              <p className="tituloPrincipalRedes">Redes Sociales</p>
-              <div className="containerIconRedes">
-                <img src={google} alt="" className="imgRedes" />
-                <img src={facebook} alt="" className="imgRedes" />
-                <img src={twiter} alt="" className="imgRedes" />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
