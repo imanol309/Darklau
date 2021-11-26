@@ -6,7 +6,7 @@ import twiter from "../../assets/iconsRedes/twiter.png";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Login() {
-  const { loginWithRedirect, user, isAuthenticated, logout, isLoading } =
+  const { loginWithRedirect, isLoading } =
     useAuth0();
 
   return (
@@ -19,13 +19,13 @@ function Login() {
             <div className="TextPrincipalContainer">
               <h3 className="TextPrincipal">Darklau</h3>
             </div>
-            {isAuthenticated ? (
+            {/* {isAuthenticated ? (
               <div className="textNewUser">
                 <p className="TextUp" onClick={() => logout()}>
                   SALIR
                 </p>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
           <div className="FormLogin">
             <div className="FormImg">
@@ -34,32 +34,21 @@ function Login() {
             <div className="FormInput">
               <div className="FormTitulo">
                 <h1 className="textBack">
-                  Bienvenido {isAuthenticated ? `${user.name}` : "de nuevo!"}
+                  Bienvenido de nuevo!
                 </h1>
                 <h5 className="textCon">
-                  {isAuthenticated
-                    ? `Ya puedes Continuar`
-                    : `Iniciar sesión para continuar`}
+                  Iniciar sesión para continuar
                 </h5>
               </div>
               <div className="FormButton">
-                {isAuthenticated ? (
-                  <div className="FormUsuario">
-                    <img src={user.picture} alt="" className="UsuarioImg" />
-                    <p className="UsuarioName">{user.name}</p>
-                    <p className="UsuarioEmail">{user.email}</p>
-                    <button className="btnUsuario">ENTRAR</button>
-                  </div>
-                ) : (
-                  <div className="FormButtonIniciar">
+              <div className="FormButtonIniciar">
                     <button
                       onClick={() => loginWithRedirect()}
                       className="btnLogin"
                     >
                       Iniciar Seccion
                     </button>
-                  </div>
-                )}
+                </div>
               </div>
               <div className="FormRedes">
                 <p className="tituloPrincipalRedes">Redes Sociales</p>

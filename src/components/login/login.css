@@ -174,7 +174,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .FormUsuario{
@@ -219,7 +219,6 @@ button {
 }
 
 .FormButtonIniciar{
-  margin-top: 5%;
   width: 100%;
   height: 150px;
   display: flex;
