@@ -1,15 +1,15 @@
 /* Contenedor de toda la paginas  */
 
 body {
-    background-image: url('../../assets/img/new_wave.png');
-    background-repeat: no-repeat;
-    /* background-position-y: bottom; */
+  background-image: url('../../assets/img/new_wave.png');
+  background-repeat: no-repeat;
+  /* background-position-y: bottom; */
 }
 
 /* Contenedor del login completo la CARD que se ve en centro */
 
-.container{
-    height: 100vh;
+.container {
+  height: 100vh;
 }
 
 .containerLogin {
@@ -115,6 +115,7 @@ input {
   margin-block-start: 6%;
   width: 95%;
 }
+
 .inputPassword {
   text-align: center;
   padding: 0.25em 0.6em;
@@ -223,6 +224,7 @@ button {
     height: 430px;
     margin: 11%;
   }
+
   .FormLogin {
     height: 650px;
   }
@@ -264,7 +266,7 @@ button {
     font-size: 35px;
     letter-spacing: 3px;
   }
-  
+
   .FormRedes {
     display: flex;
     flex-direction: column;
@@ -272,6 +274,7 @@ button {
     align-items: center;
     justify-content: center;
   }
+
   .tituloPrincipalRedes {
     margin-right: 0;
   }
