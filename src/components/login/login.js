@@ -6,8 +6,7 @@ import twiter from "../../assets/iconsRedes/twiter.png";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Login() {
-  const { loginWithRedirect, isLoading } =
-    useAuth0();
+  const { loginWithRedirect, isLoading } = useAuth0();
 
   return (
     <div className="container ">
@@ -33,21 +32,17 @@ function Login() {
             </div>
             <div className="FormInput">
               <div className="FormTitulo">
-                <h1 className="textBack">
-                  Bienvenido de nuevo!
-                </h1>
-                <h5 className="textCon">
-                  Iniciar sesión para continuar
-                </h5>
+                <h1 className="textBack">Bienvenido de nuevo!</h1>
+                <h5 className="textCon">Iniciar sesión para continuar</h5>
               </div>
               <div className="FormButton">
-              <div className="FormButtonIniciar">
-                    <button
-                      onClick={() => loginWithRedirect()}
-                      className="btnLogin"
-                    >
-                      Iniciar Seccion
-                    </button>
+                <div className="FormButtonIniciar">
+                  <button
+                    onClick={() => loginWithRedirect()}
+                    className="btnLogin"
+                  >
+                    Iniciar Seccion
+                  </button>
                 </div>
               </div>
               <div className="FormRedes">
